@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Homepage</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .horizontal-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .division {
+            flex: 1;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <b> Homepage </b> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#titanic problem">Titanic Problem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contribution">Contribution</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- First Section -->
+    <section id="first" class="text-center py-5">
+        <div class="container">
+            <h1> Pavan Gogineni</h1>
+            <p>  Web Developer | Problem Solver</p>
+        </div>
+    </section>
+    <!-- Education Section -->
+    <section id="titanic problem" class="py-5">
+        <div class="container">
+            <h2>Titanic Problem</h2><br>
+            <h4>The Challenge:</h4><br>
+            <p>The competition is simple: we want you to use the Titanic passenger data (name, age, price of ticket, etc) to try to predict who will survive and who will die.</p>
+            <h4>The Data:</h4>
+            <p>We had used three files in the data. They are, train.csv,test.csv and gender_submission.csv.</p>
+            <h5>train.csv</h5>
+            <p>train.csv contains the details of a subset of the passengers on board (891 passengers, to be exact -- where each passenger gets a different row in the table). To investigate this data, click on the name of the file on the left of the screen. Once you've done this, you can view all of the data in the window.<br>
+                The values in the second column ("Survived") can be used to determine whether each passenger survived or not:<br>
+                 1.if it's a "1",the passenger survived.<br>
+                 2.if it's a "0",the passenger died.
+                </p>
+
+            <h5>text.csv</h5>
+            <p>Using the patterns you find in train.csv, you have to predict whether the other 418 passengers on board (in test.csv) survived.</p><br>
+            
+            <h5>gender_submission.csv</h5>
+            <p>The gender_submission.csv file is provided as an example that shows how you should structure your predictions. It predicts that all female passengers survived, and all male passengers died. Your hypotheses regarding survival will probably be different, which will lead to a different submission file. But, just like this file, your submission should have:</p>
+            <p>1.a "PassengerId" column containing the IDs of each passenger from test.csv.</p>
+            <p>2.a "Survived" column (that you will create!) with a "1" for the rows where you think the passenger survived, and a "0" where you predict that the passenger died.</p>
+            <h4>Motivation</h4>
+            <p>we had used Logistic regression to solve our titanic problem.</p>
+            <h4>Logistic regression</h4>
+
+            <p>Logistic regression is a famous classifier still used today frequently despite its age. it is regression <br>
+            similar to Linear regression, yet operates as a classifier. To understand logistic regression, we should have some idea<br>
+            about linear regression.Let's have a look at it.<br>
+
+            Hopefully, we all know that any linear equation can be written in the form of...
+           <p><center>y=mX+b</center></p>
+           <p>1.Here, m=slope of the regression line. It represnets the relationship  between x and y.<br>
+            2.b=y-intercept<br>
+            3.x and y are the points location in x_axis and y_axis respectively.<br>
+            This slope equation can also be written as,
+            <p><center>y=β0+β1x+ϵ</center></p>
+    
+          </p>
+
+        </p>
+        <p>This is the equation for a simple linear regression. here,<br>
+            y = Dependent variable.<br>
+            β0= the intercept, it is constant.<br>
+            β1= Coefficient of independent variable.<br>
+            x= Indepentent variable.<br>
+            ϵ= error or residual.
+        </p>
+       <p>We use this function to predict the value of a dependent variable with the help of only one independent variable. <br>Therefore this regression is called Simple Linear Regression.</p>
+       <p>Similar to Simple Linear Regression, there is Multiple Linear Regression which can be used to predict dependent variable using multiple independent variables. <br>Let's look at the equation for Multiple Linear Regression,</p>
+        <p><center>y^=β0+β1x1+β2x2+...+βnxn</center></p> 
+        <p>So, we know/reviewed a bit about linear regression, and therefore we know how to deal with data that looks like this,</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/1200px-Linear_regression.svg.png" width="300" height="300">
+               
+            
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-5">
+        <div class="container">
+            <h2>Blog</h2><br>
+            <h4>NoteBook</h4>
+            <p># This Python 3 environment comes with many helpful analytics libraries installed<br>
+                # It is defined by the kaggle/python Docker image: https://github.com/kaggle/docker-python<br>
+                # For example, here's several helpful packages to load.<br>
+                
+                       <b><p>import numpy as np <br>
+                        import pandas as pd </p></b>
+                <b><p></p>import os<br>
+                for dirname, _, filenames in os.walk('/kaggle/input'):<br>
+                    for filename in filenames:<br>
+                        print(os.path.join(dirname, filename))</p></b>
+
+                        <p>/kaggle/input/d/pavangogineni1922/titanic/train.csv<br>
+                            /kaggle/input/d/pavangogineni1922/titanic/test.csv<br>
+                            /kaggle/input/d/pavangogineni1922/titanic/gender_submission.csv<br>
+                            /kaggle/input/titanic/train.csv<br>
+                            /kaggle/input/titanic/test.csv<br>
+                            /kaggle/input/titanic/gender_submission.csv</p>
+
+                <b><p>data = pd.read_csv("/kaggle/input/titanic/train.csv")<br>
+                    test = pd.read_csv("/kaggle/input/titanic/test.csv")<br>
+                    test_ids = test["PassengerId"]<br>
+                    
+                    def clean(data):<br>
+                        data = data.drop(["Ticket", "PassengerId", "Name", "Cabin"], axis=1)<br>
+                        
+                        cols = ["SibSp", "Parch", "Fare", "Age"]<br>
+                        for col in cols:<br>
+                            data[col].fillna(data[col].median(), inplace=True)<br>
+                            
+                        data.Embarked.fillna("U", inplace=True)<br>
+                        return data<br>
+                    
+                    data = clean(data)<br>
+                    test = clean(test)</p></b>
+
+                    <b><p>data.head(3)</p></b>
+                    
+                    <b><p>from sklearn import preprocessing<br>
+                        le = preprocessing.LabelEncoder()<br>
+                        columns = ["Sex", "Embarked"]<br>
+                        
+                        for col in columns:<br>
+                            data[col] = le.fit_transform(data[col])<br>
+                            test[col] = le.transform(test[col])<br>
+                            print(le.classes_)<br>
+                              
+                        data.head(5)</p></b>
+
+                        <b><p>from sklearn.linear_model import LogisticRegression<br>
+                            from sklearn.model_selection import train_test_split<br>
+                            
+                            y = data["Survived"]<br>
+                            X = data.drop("Survived", axis=1)<br>
+                            
+                            X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)</p></b>
+
+                            <b><p>clf = LogisticRegression(random_state=0, max_iter=1000).fit(X_train, y_train)</p></b>
+
+                            <b><p>predictions = clf.predict(X_val)<br>
+                                from sklearn.metrics import accuracy_score<br>
+                                accuracy_score(y_val, predictions)</p></b>
+
+                            <b><p>submission_preds = clf.predict(test)</p></b>
+                            <b><p>df = pd.DataFrame({"PassengerId": test_ids.values,<br>
+                                "Survived": submission_preds,<br>
+                               })</p></b>
+
+                               <b><p>df.to_csv("submission.csv", index=False)</p></b>
+
+            <h4>Output:</h4>
+            <p>It take's <b>16.1</b> seconds to run.</p>
+            <p>The best score for my code is <b>0.76315</b>.</p>
+                
+                
+        </div>
+    </section>
+
+    <!-- contribution section -->
+    <section id="contribution" class="py-5">
+        <div class="container">
+            <h2>Contributions</h2>
+            <p>By using Logistic regression, we have got 0.76315</p>
+            <img src="C:\Users\pavan\OneDrive\Desktop\Datamining.jpg" width="800" height="300">
+            <p>By using decision tress, we got 0.78</p>
+            <img src="C:\Users\pavan\OneDrive\Desktop\dm2.jpg" width="800" height="300">
+
+
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+          <h2>Contact</h2>
+			             <div class="horizontal-container">
+              <div class="division">
+                <h5>Get in touch</h5><br>
+                <p> 
+                  <a href="https://www.google.com/maps/place/412+Summit+Ave,+Arlington,+TX+76013/"> 412 Summit Ave </a> <br>
+                  <a href="https://www.google.com/maps/place/412+Summit+Ave,+Arlington,+TX+76013/"> Arlington, Texas 76013 </a>
+                  </p>
+                  
+              </div>
+              <div class="division">
+                <h5>Send me a message</h5><br>
+                  <form onsubmit="return validateForm()" action="mailto:iameet6338@email.com" method="post" enctype="text/plain">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name"><br>
+                      <span id="nameError" class="error"></span><br>
+
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email"><br>
+                      <span id="emailError" class="error"></span><br>
+
+                      <input type="submit" value="Submit">
+                  </form>
+              </div>
+          </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+
+            var nameError = document.getElementById("nameError");
+            var emailError = document.getElementById("emailError");
+
+            nameError.innerHTML = "";
+            emailError.innerHTML = "";
+
+            if (name == "") {
+                nameError.innerHTML = "Name is required.";
+                return false;
+            }
+
+            if (email == "") {
+                emailError.innerHTML = "Email is required.";
+                return false;
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                emailError.innerHTML = "Invalid email address.";
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>
